@@ -15,7 +15,7 @@
                         <template v-if="!isSort(column)">
                             <div class="float-right">
                                 <slot name="no-sort-icon">
-                                    &#x1F825;&#x1F827;
+                                    &#x1F825;&#x1F827;test
                                 </slot>
                             </div>
                         </template>
@@ -24,21 +24,21 @@
                             <template v-if="query.sort.order==='asc'">
                                 <div class="float-right">
                                     <slot name="sort-asc-icon">
-                                        &#x1F825;
+                                        &#x1F825;test
                                     </slot>
                                 </div>
                             </template>
 
                             <template v-else-if="query.sort.order==='desc'">
                                 <slot name="sort-desc-icon">
-                                    <div class="float-right">&#x1F827;</div>
+                                    <div class="float-right">&#x1F827;test</div>
                                 </slot>
                             </template>
 
                             <template v-else>
                                 <div class="float-right">
                                     <slot name="no-sort-icon">
-                                        &#x1F825;&#x1F827;
+                                        &#x1F825;&#x1F827;test
                                     </slot>
                                 </div>
                             </template>
