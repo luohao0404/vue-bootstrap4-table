@@ -95,17 +95,17 @@
                                             <SortIcon :sort="query.sort" :column="column">
                                                     <template slot="vbt-sort-asc-icon">
                                                         <slot name="sort-asc-icon">
-                                                                <font-awesome-icon icon="arrow-up" />
+                                                                <font-awesome-icon icon="sort-up" />
                                                         </slot>
                                                     </template>
                                                     <template slot="vbt-sort-desc-icon">
                                                         <slot name="sort-desc-icon">
-                                                                <font-awesome-icon icon="arrow-dwon" />
+                                                                <font-awesome-icon icon="sort-down" />
                                                         </slot>
                                                     </template>
                                                     <template slot="vbt-no-sort-icon">
                                                         <slot name="no-sort-icon">
-                                                                <font-awesome-icon icon="arrows-v" />
+                                                            <font-awesome-icon icon="sort" />
                                                         </slot>
                                                     </template>
                                             </SortIcon>
@@ -323,10 +323,12 @@ import Simple from "./Filters/Simple.vue";
 import MultiSelect from "./Filters/MultiSelect.vue";
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
-import { faArrowsV } from '@fortawesome/free-solid-svg-icons';
+import { faSortUp } from '@fortawesome/free-solid-svg-icons';
+import { faSortDown } from '@fortawesome/free-solid-svg-icons';
+import { faSort } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
+library.add(faSortUp, faSortDown, faSort)
 
 import {
     EventBus
