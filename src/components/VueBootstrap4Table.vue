@@ -95,17 +95,17 @@
                                             <SortIcon :sort="query.sort" :column="column">
                                                     <template slot="vbt-sort-asc-icon">
                                                         <slot name="sort-asc-icon">
-                                                                &#x1F825;
+                                                                <font-awesome-icon icon="arrow-up" />
                                                         </slot>
                                                     </template>
                                                     <template slot="vbt-sort-desc-icon">
                                                         <slot name="sort-desc-icon">
-                                                                &#x1F827;
+                                                                <font-awesome-icon icon="arrow-dwon" />
                                                         </slot>
                                                     </template>
                                                     <template slot="vbt-no-sort-icon">
                                                         <slot name="no-sort-icon">
-                                                                &#x1F825;&#x1F827;
+                                                                <font-awesome-icon icon="arrows-v" />
                                                         </slot>
                                                     </template>
                                             </SortIcon>
@@ -322,6 +322,12 @@ import Pagination from "./Pagination.vue";
 import Simple from "./Filters/Simple.vue";
 import MultiSelect from "./Filters/MultiSelect.vue";
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { faArrowsV } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
 import {
     EventBus
 } from '../event-bus.js';
@@ -470,6 +476,7 @@ export default {
         MultiSelect,
         SortIcon,
         Pagination,
+        FontAwesomeIcon,
     },
     methods: {
         initConfig() {
